@@ -1,0 +1,528 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial;
+    background: #0f172a; 
+    color: white;
+    
+    padding-top: 80px;
+
+}
+
+.container {
+   
+    width: 90%;
+    margin: auto;
+}
+
+/* NAVBAR */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.nav__links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav__links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: white;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+      display: inline-block;
+  margin-top: 10px;
+    background: #4f46e5;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+/* ABOUT */
+/* .about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about__stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+} */
+
+.stat h3 {
+    color: #4f46e5;
+    font-size: 2rem;
+}
+
+/* SERVICES */
+.services {
+    padding: 50px 0;
+    text-align: center;
+          background: linear-gradient(135deg, #0f172a, #1e3a8a);
+
+}
+
+.services__grid {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+
+}
+
+.service {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+/* DOCTORS */
+.doctors {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.doctors__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+  
+}
+
+.doctor {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  
+}
+
+.doctor img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.doctor:hover {
+    transform: translateY(-5px);
+}
+
+/* APPOINTMENT */
+.appointment {
+    padding: 50px 0;
+    text-align: center;
+      background: linear-gradient(135deg, #1e3a8a , #0f172a);
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.form input,
+.form select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form button {
+    margin-top: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+    .doctors__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CONTACT */
+.contact {
+    padding: 40px ;
+    text-align: center;
+}
+
+.contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+/* NAVBAR */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0,0,0,0.7);
+
+}
+/*glass effect*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+
+    background: rgba(15, 23, 42, 0.6); /* dark glass */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+    width: 100%;
+    position: relative;
+}
+
+.nav__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* NAV LINKS */
+.nav__links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav__links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.nav__links a:hover {
+    color: #38bdf8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+.logo,
+.nav__links a {
+    color: white;
+}
+
+.nav__links a:hover {
+    color: #38bdf8;
+}
+
+.header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero__content {
+    width: 50%;
+}
+
+.hero__model {
+    width: 50%;
+}
+
+/* mobile responsive */
+/* @media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero__content,
+    .hero__model {
+        width: 100%;
+    }
+} -----------------------------------------------------------------*/
+@media (max-width: 768px) {
+
+    /* GENERAL */
+    body {
+        padding-top: 70px;
+    }
+
+    #typing {
+    font-size: 1.2rem;
+}
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    /* NAVBAR */
+    
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    /* HERO */
+    /* .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    } */
+ .hero {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: white;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding-top: 20px;
+
+}
+
+    .hero__content {
+        width: 100%;
+    }
+
+    
+    .hero__model {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    model-viewer {
+        height: 250px !important;
+    }
+
+    /* SERVICES */
+    .services__grid {
+          background: linear-gradient(135deg, #1e3a8a,#0f172a,);
+
+        grid-template-columns: 1fr;
+    }
+
+    /* DOCTORS */
+    .doctors__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor img {
+        width: 80%;
+    }
+
+    /* CONTACT */
+    .contact__grid {
+        grid-template-columns: 1fr;
+    }
+    .hero__content h1 {
+    
+    background: linear-gradient(to right, #38bdf8, #4f46e5);
+    -webkit-background-clip: text;
+    color: transparent;
+      font-size: 1.6rem !important;
+    line-height: 1.3;
+}
+}
+/* -------------------------------------------------------------------------------------- */
+
+.btn {
+    background: #4f46e5;
+    padding: 10px 22px;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+    border-radius: 50px;} /* 👈 fully curved*/
+
+
+
+.btn:hover {
+    background: #6366f1;
+    transform: scale(1.05);
+}
+.service:hover,.highlight:hover,
+.doctor:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+}
+
+section {
+    padding: 60px 0;
+}
+/* HAMBURGER ICON */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav__links {
+        display: none;
+        flex-direction: column;
+        background: #0f172a;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .nav__links.active {
+        display: flex;
+    }
+}
+.about {
+    text-align: center;
+    padding: 60px 0;
+      background: linear-gradient(135deg, #1e3a8a, #0f172a);
+
+}
+
+.about__content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.about p {
+    margin: 15px 0 25px;
+    color: #cbd5f5;
+    line-height: 1.6;
+}
+
+.about__highlights {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    gap: 15px;
+}
+
+.highlight {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+    transition: 0.3s;
+}
+
+.highlight h3 {
+    color: #38bdf8;
+    font-size: 1.5rem;
+}
+
+.highlight:hover {
+    transform: translateY(-5px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .about__highlights {
+        flex-direction: column;
+    }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.hero__model {
+  animation: float 4s ease-in-out infinite;
+}
+.whatsapp-float {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 24px;
+    padding: 12px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.service, .doctor {
+    transition: 0.4s;
+}
